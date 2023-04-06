@@ -1,3 +1,8 @@
+<?php
+include "./home.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,9 +18,7 @@
   </head>
   <body>
     <div class="container">
-    <?php
-include "./home.php";
-?>
+
     <form method="POST" class="col-md-5">
       <br/> <br/>
       <h3>Form</h3>
@@ -23,6 +26,7 @@ include "./home.php";
          <label for="firstname">Your Name:</label>
       <input type="text" id="firstname"class="form-control"
        placeholder="First Name" name="firstname"/>
+       <span class="text-danger"><?php echo $warnmsg; ?></span>
       </div>
      <div class="form-group">
 
@@ -52,10 +56,13 @@ include "./home.php";
    
    
 <?php
-    echo $firstname."<br>";
-    echo $field."<br>";
-    echo $email."<br>";
-    echo $salary."<br>";
+if(isset($_REQUEST['submit'])){
+  echo $firstname."<br>";
+  echo $field."<br>";
+  echo $email."<br>";
+  echo $salary."<br>";
+
+}
  ?>
     
     
