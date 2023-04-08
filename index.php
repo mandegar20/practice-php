@@ -39,6 +39,7 @@ include "./home.php";
        <label for="email">Email:</label>
        <input type="text" id="email"class="form-control"
         placeholder="Email" name="email"/>
+        <span class="text-danger"><?php  echo $warnmsgemail?> </span>
      </div>
      <div class="form-group">
 
