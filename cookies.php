@@ -50,6 +50,43 @@
 </div>
 </form>
 </div>
+<div class="col-md-7">
+    <h3>Emplyee List</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>User Name:</th>
+            <td><?php 
+            if (isset($_COOKIE['u'])){
+                echo $_COOKIE['u'];
+            }
+            ?></td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td><?php 
+            if (isset($_COOKIE['e'])){
+                echo $_COOKIE['e'];
+            }
+            ?></td>
+        </tr>
+        <tr>
+            <th>Password:</th>
+            <td><?php 
+            if (isset($_COOKIE['p'])){
+                echo $_COOKIE['p'];
+            }
+            ?></td>
+        </tr>
+        <tr>
+            <th>Image:</th>
+            <td><?php 
+            if (isset($_COOKIE['img'])){
+                echo $_COOKIE['img'];
+            }
+            ?></td>
+        </tr>
+    </table>
+</div>
 </div>
 <?php
 if (isset($_POST['submit'])){
