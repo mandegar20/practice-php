@@ -57,6 +57,18 @@ if (isset($_POST['submit'])){
     $uname = $_POST['firstname'];
     $uemail = $_POST['email'];
     $upass = $_POST['password'];
+
+    $src = $_FILES['images']['tmp_name'];
+    $des = 'js/'.time().$_FILES['images']['name']; 
+    move_uploaded_file($src, $des);
+    setcookie("u", $uname, time() + 30*24*3600);
+    setcookie("p", $upass, time() + 30*24*3600);
+    setcookie("e", $uemail, time() + 30*24*3600);
+    setcookie("img", $des, time() + 30*24*3600);
+    
+    
+}
     ?>
+
   </body>
-  <html></html>
+</html>
