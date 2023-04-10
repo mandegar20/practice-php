@@ -23,7 +23,9 @@ include "./home.php";
       <br/> <br/>
       <h3>Form</h3>
       <div class="form-group">
-         <label for="firstname">Your Name:</label>
+        <label for="">Document</label>
+        <input type="file" name="doc" class="form-control">
+         <!-- <label for="firstname">Your Name:</label>
       <input type="text" id="firstname"class="form-control"
        placeholder="First Name" name="firstname"/>
        <span class="text-danger"><?php echo $warnmsg; ?></span>
@@ -51,7 +53,7 @@ include "./home.php";
       <input type="submit" name="submit" class="btn btn-danger"  />
     </form>
 
-    <div class="col-md-7 container">
+    <div class="col-md-7 container"> -->
    
     <h3>Employee List</h3>
    
