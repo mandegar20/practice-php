@@ -23,7 +23,10 @@ include "./home.php";
       <br/> <br/>
       <h3>Form</h3>
       <div class="form-group">
-         <label for="firstname">Your Name:</label>
+      <label for="">Document</label>
+        <input type="file" name="doc" class="form-control">
+</div>
+         <!-- <label for="firstname">Your Name:</label>
       <input type="text" id="firstname"class="form-control"
        placeholder="First Name" name="firstname"/>
        <span class="text-danger"><?php echo $warnmsg; ?></span>
@@ -46,7 +49,7 @@ include "./home.php";
        <label for="salary">Salary:</label>
        <input type="text" id="salary"class="form-control" 
        placeholder="Salary" name="salary"/>
-     </div>
+     </div> -->
       <br/>
       <input type="submit" name="submit" class="btn btn-danger"  />
     </form>
@@ -57,13 +60,13 @@ include "./home.php";
    
    
 <?php
-if(isset($_REQUEST['submit'])){
-  echo $firstname."<br>";
-  echo $field."<br>";
-  echo $email."<br>";
-  echo $salary."<br>";
+// if(isset($_REQUEST['submit'])){
+//   echo $firstname."<br>";
+//   echo $field."<br>";
+//   echo $email."<br>";
+//   echo $salary."<br>";
 
-}
+// }
  ?>
     
     
