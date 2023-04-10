@@ -48,12 +48,12 @@ include "./home.php";
        <label for="salary">Salary:</label>
        <input type="text" id="salary"class="form-control" 
        placeholder="Salary" name="salary"/>
-     </div>
+     </div> -->
       <br/>
       <input type="submit" name="submit" class="btn btn-danger"  />
     </form>
 
-    <div class="col-md-7 container"> -->
+    <div class="col-md-7 container">
    
     <h3>Employee List</h3>
    
