@@ -13,6 +13,7 @@
   </head>
 <body>
     
+    <div class="col-md-7">
 <div class="container">
 <form method="POST" class="col-md-5" enctype= "multipart/form-data">
 <br/> <br/>
@@ -59,31 +60,71 @@
 <br/>
 <input type="submit" name="submit" class="btn btn-danger"  />
 </form>
+</div>
+</div>
+<div class="col-md-5">
+    <div class="container">
+        <h3>Employee List</h3>
+        <?php   
+        // open files
 
+        $file = fopen("emp.txt", "r");
+        // //just reads one one chracter
+        // echo fgetc($file);
+        // //reads one line
+        // echo fgets($file);
+        // // we should use loop to read up to end of the file
+        // feof = file end of file      finding end of file
+        // while(!feof($file)){
+        //     echo fgets($file)."<br/>";
+        // }
+        // fclose($file);
+       
+        
+        
+        ?>
+    </div>
 </div>
 
 <?php
 if (isset($_POST['submit'])){
-    $uname = $_POST['firstname'];
-    $uemail = $_POST['email'];
-    $upass = $_POST['password'];
-    $src = $_FILES['images']['tmp_name'];
-    $des = "js/".time().$_FILES['images']['name'];
-    move_uploaded_file($src, $des);
-   
-    $info = "
-    username = $uname \r\n
-    useremail = $uemail \r\n
-    userpass = $upass \r\n
-    ------------------------------------
-    ";
-    $f = fopen("emp.txt", "a+");
-    fwrite($f, $info);
-    fclose($f);
+    // 
+    // $uname = $_POST['firstname'];
+    // $uemail = $_POST['email'];
+    // $upass = $_POST['password'];
+    // $src = $_FILES['images']['tmp_name'];
+    // $des = "js/".time().$_FILES['images']['name'];
+    // move_uploaded_file($src, $des);
+
+
+    // // Write a .txt file
+    // $info = "
+    // username = $uname \r\n
+    // useremail = $uemail \r\n
+    // userpass = $upass \r\n
+    // ------------------------------------
+    // ";
+    // $f = fopen("emp.txt", "a+");
+    // fwrite($f, $info);
+    // fclose($f);
     echo " <br/> <div class='container alert alert-success'>
         Successfully Inserted!!
      </div>";
-     
+     fopen("text.docx", "x");
+     // delete file
+     unlink("text.docx");
+     copy("emp.txt", "js/text.txt");
+     unlink("js/text.txt");
+     //make a folder
+    //  mkdir("Modal");
+     //delete folder
+    //  rmdir("Modal");
+    //rename
+    //  rename();
+
+    // read files from start to end
+    //  $filetoread =fread($file, filesize("emp.txt"));
+    //  echo $filetoread;
 }
 ?>
 
