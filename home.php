@@ -34,22 +34,24 @@
             // $email = $_POST['email'];
        
 // ======================= FILES ===============================
-            echo "<pre>";
-            print_r($_FILES);
-            echo "</pre>";
-            echo $_FILES["doc"]["size"]/1000 ." kb";
-            echo " <br/>  ";
-            echo $_FILES["doc"]["name"];
+            // echo "<pre>";
+            // print_r($_FILES);
+            // echo "</pre>";
+            // echo $_FILES["doc"]["size"]/1000 ." kb";
+            // echo " <br/>  ";
+            // echo $_FILES["doc"]["name"];
 
-            $source = $_FILES['doc']['tmp_name'];
-            $destination = "js/".time().$_FILES['doc']['name'];
-            move_uploaded_file($source, $destination);
-            echo "
-            <div class='container alert alert-success'>
-                Successfully Inserted!!
-            </div>
+            // $source = $_FILES['doc']['tmp_name'];
+            // $destination = "js/".time().$_FILES['doc']['name'];
+            // move_uploaded_file($source, $destination);
+            // echo "
+            // <div class='container alert alert-success'>
+            //     Successfully Inserted!!
+            // </div>
             
-            ";
+            // ";
+    // ================================= Eight ==============================
+    
         }
 
 ?>
