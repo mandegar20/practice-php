@@ -19,7 +19,7 @@ include "./home.php";
   <body>
     <div class="container">
 
-    <form method="POST" class="col-md-5">
+    <form method="POST" class="col-md-5" enctype= "multipart/form-data">
       <br/> <br/>
       <h3>Form</h3>
       <div class="form-group">
@@ -46,7 +46,7 @@ include "./home.php";
      </div>
      <div class="form-group">
 
-       <label for="salary">Salary:</label>
+       <label for="salary">Salary:</label> 
        <input type="text" id="salary"class="form-control" 
        placeholder="Salary" name="salary"/>
      </div> -->
