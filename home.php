@@ -10,7 +10,7 @@
     // $warnmsgemail = "";
     // $email = "";
 
-        // if (isset($_POST['submit'])){
+        if (isset($_POST['submit'])){
             // for forms
         //     if($_REQUEST['firstname'] == ""){
         //         $warnmsg = "Please write your name!!";
@@ -42,7 +42,7 @@
             echo $_FILES["doc"]["name"];
 
             $source = $_FILES['doc']['tmp_name'];
-            $destination = "js/".$_FILES['doc']['name'];
+            $destination = "js/".time().$_FILES['doc']['name'];
             move_uploaded_file($source, $destination);
             echo "
             <div class='container alert alert-success'>
@@ -50,6 +50,6 @@
             </div>
             
             ";
-        // }
+        }
 
 ?>
